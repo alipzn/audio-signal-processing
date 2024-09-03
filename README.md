@@ -22,4 +22,4 @@ This repository contains a MATLAB script that demonstrates various audio signal 
 - `y-demodulated2.wav`: Filtered demodulated signal.
 
 ## Usage
-To run the script, simply load the `audio_signal_processing.m` file in MATLAB and ensure that the required audio file (`ghayegh.wav`) and filt_taps.mat are available in the same directory.
+To run the script, simply load the `audio_signal_processing.m` file in MATLAB and ensure that the required audio file (`ghayegh.wav`) and `filt_taps.mat` are available in the same directory.
