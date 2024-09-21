@@ -160,10 +160,10 @@ title('Magnitude Spectrum of Downsampled "ghayegh7_3"');
 grid on;
 
 %% Part 8: Custom DFT Calculation
-N_dft = length(y);
+N_dft = 44;
 DFT = zeros(N_dft, 1);
 for k = 1:N_dft
-    for n = 1:N_dft
+    for n = 1:length(y)
         DFT(k) = DFT(k) + y(n) * exp(-1j * 2 * pi * (k-1) * (n-1) / N_dft);
     end
 end
@@ -171,7 +171,7 @@ DFT = fftshift(DFT); % Center zero frequency component
 magnitude_DFT = abs(DFT);
 
 figure;
-plot(f, magnitude_DFT);
+plot(1:N_dft, magnitude_DFT);
 xlabel('Frequency (rad/sample)');
 ylabel('Magnitude');
 title('Magnitude Spectrum using Custom DFT');
